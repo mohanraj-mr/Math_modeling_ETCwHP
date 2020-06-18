@@ -1,0 +1,13 @@
+% The code is aimed to mathematically model the performance of the
+% evacuated tube solae collector with heat pipe integration. 
+
+%Team: Mohan Raj, Keerthi Gowda, Ashrith Shetty, Amarthya
+%Created: 18 June 2020 by Mohan Raj
+
+
+function [ output_args ] = ETCwHP_MM( input_args )
+% 
+
+
+end
+
