@@ -1,12 +1,43 @@
 % The code is aimed to mathematically model the performance of the
-% evacuated tube solae collector with heat pipe integration. 
+% evacuated tube solar collector with heat pipe integration. 
 
 %Team: Mohan Raj, Keerthi Gowda, Ashrith Shetty, Amarthya
 %Created: 18 June 2020 by Mohan Raj
 
 
+
 function [ output_args ] = ETCwHP_MM( input_args )
-% 
+
+%                              Known Constants::
+% Properties of Borosilicate Glass Tube
+% Thermal Conductivity W/mK
+k =
+% Solar Transmittance 
+tow=
+% Solar Absorptance 
+alph=
+% Solar Reflectance 
+rho=
+% Thermal Emittance 
+eps=
+
+%           Dimensions of Evacuated Tube Collector
+%Number of Tubes
+n= 5
+%Length of Tube in m
+lt=
+%Outer diameter of Glass Cover in m
+odg= 
+%Outer diameter of Absorber tube in m
+odt= 
+%Inner diameter of Absorber tube in m
+tt=
+%Distance between tubes in m
+dt= 
+%Total Heat Collecting Area in sq.m,
+Ah= 
+%Total Area of Absorber tube in sq.m,
+At = 
 
 
 end
