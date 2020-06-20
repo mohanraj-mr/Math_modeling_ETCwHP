@@ -1,5 +1,7 @@
+%Mathematical Modelling of Evacuated Tube Solar Water Heater with heat pipe
+
 % The code is aimed to mathematically model the performance of the
-% evacuated tube solar collector with heat pipe integration. 
+% evacuated tube solar collector with heat pipe integration.
 
 %Team: Mohan Raj, Keerthi Gowda, Ashrith Shetty, Amarthya
 %Created: 18 June 2020 by Mohan Raj
@@ -11,34 +13,65 @@ function [ output_args ] = ETCwHP_MM( input_args )
 %                              Known Constants::
 % Properties of Borosilicate Glass Tube
 % Thermal Conductivity W/mK
-k =
-% Solar Transmittance 
+kg = 1.14
+% Solar Transmittance
 tow=
-% Solar Absorptance 
+% Solar Absorptance
 alph=
-% Solar Reflectance 
+% Solar Reflectance
 rho=
-% Thermal Emittance 
+% Thermal Emittance
 eps=
 
 %           Dimensions of Evacuated Tube Collector
 %Number of Tubes
 n= 5
-%Length of Tube in m
-lt=
-%Outer diameter of Glass Cover in m
-odg= 
-%Outer diameter of Absorber tube in m
-odt= 
-%Inner diameter of Absorber tube in m
-tt=
-%Distance between tubes in m
-dt= 
-%Total Heat Collecting Area in sq.m,
-Ah= 
+%Length of Tube in mm
+lt= 500
+%Outer diameter of Glass Cover in mm
+odg= 58
+%Outer diameter of Absorber tube in mm
+odt= 49
+%Inner diameter of Absorber tube in mm
+tt= 47
+%Distance between tubes in mm
+dt= 20
+%Total Heat Collecting Area in sq.mm,
+Ah= 36424
 %Total Area of Absorber tube in sq.m,
-At = 
+At = 30772
+
+%Multiple reflection factor, f_ref
+f_ref=1/(1-(rho_o*rho_i*A_i/A_o))
+
+%rho_o= Outer tube reflection co-effcient= 0.14; rho_i= Inner tube
+%reflection co-efficient= 0.08;
+
+%Optical efficiency, o_eff
+
+o_eff= to_t*a_t*f_ref
+
+%to_t=transmission coefficient=0.78; a_t= absorption coefficient=0.93
+
+%Effective Solar radiation, I_o,eff
+I_o,eff=I_o*()
 
 
+
+%Beam radiation, I_b
+I_b=I_o
+
+%Main Equation
+
+Qt=o_eff*I*A_ssa-(U_t*A_i+1/r_t)*(T_ti-T_a)
+
+%o_eff=optical efficiency; I- Insolation; A_ssa-Solar selective absorber
+%area, U_t=Overall Heat Loss Coefficient; *A_i= internal surface area of
+%absorber; r_t= Total thermal resistance; T_ti= Inner Pipe temperature;
+%T_a= ambient temperature
 end
+
+
+
+
 
